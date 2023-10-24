@@ -30,6 +30,7 @@
 - x2: координата второй точки.
 
 **Пример использования**
-```calculateDistance(0, 5); // 5
+```javascript
+calculateDistance(0, 5); // 5
 calculateDistance(-3, 2); // 5
 ```
