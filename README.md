@@ -46,8 +46,8 @@ calculateDistance(-3, 2); // 5
 
 **Пример использования**
 ```javascript
-calculateSegmentProduct(0, 5, 2); // 10
-calculateSegmentProduct(-3, 2, 0); // 6
+calculateSegmentProduct(0, 5, 2); // 6
+calculateSegmentProduct(-1, 12, 7); // 40
 ```
 
 ### Задача 3
@@ -132,7 +132,7 @@ getFullHours(18000); // 5
 ```
 
 ### Задача 9
-Дни недели пронумерованы следующим образом: 0 — воскресенье, 1 — понедельник, 2 — вторник, ..., 6 — суббота. Дано целое число K, лежащее в диапазоне 1–365. Напишите и экспортируйте функцию `getDayOfWeek()`, которая определяет номер дня недели для K-го дня года, если известно, что в этом году 1 января было понедельником.
+Дни недели пронумерованы следующим образом: 0 — воскресенье, 1 — понедельник, 2 — вторник, ..., 6 — суббота. Дано целое число K, лежащее в диапазоне 1–365. Напишите и экспортируйте функцию `getDayOfWeek()`, которая определяет номер дня недели для K-го дня года, если известно, что в этом году 1 января (первый день) было понедельником.
 
 **Параметры:**
 
@@ -159,4 +159,334 @@ getDayOfWeek(365); // 2
 countSquares(6, 4, 2); // 4
 countSquares(8, 5, 3); // 2
 countSquares(10, 10, 5); // 4
+```
+
+## Группа Символы и строки
+
+Решения должны быть размещены в файле strings.js
+
+Для запуска теста используйте команду ___
+
+### Задача 1
+Дана строка. Напиши и экспортируй функцию `countUppercaseLetters()`, которая подсчитывает количество прописных латинских букв в данной строке.
+
+**Параметры:**
+
+- str: строка, в которой нужно подсчитать прописные латинские буквы.
+
+**Пример использования**
+```javascript
+countUppercaseLetters('HellO, World!'); // 3
+countUppercaseLetters('JavaScript123'); // 2
+countUppercaseLetters('no uppercase'); // 0
+```
+
+### Задача 2
+Даны целые положительные числа N1 и N2 и строки S1 и S2. Напишите и экспортируйте функцию `combineStrings()`, которая создает новую строку, содержащую первые N1 символов строки S1 и последние N2 символов строки S2 (в указанном порядке).
+
+**Параметры:**
+
+- N1: количество символов, которые нужно взять из начала строки S1.
+- N2: количество символов, которые нужно взять из конца строки S2.
+- S1: первая строка.
+- S2: вторая строка.
+
+**Пример использования**
+```javascript
+combineStrings(3, 2, 'Hello', 'World'); // 'Helld'
+combineStrings(2, 4, 'JavaScript', 'Coding'); // 'Jading'
+combineStrings(1, 3, 'Apple', 'Banana'); // 'Aana'
+```
+
+### Задача 3
+Даны строки S и S0. Напиши функцию `containsSubstring()`, которая проверяет, содержится ли строка S0 в строке S. Если содержится, то функция возвращает true, если не содержится, то false.
+
+**Параметры:**
+
+- S: основная строка.
+- S0: подстрока, которую нужно проверить на наличие в основной строке.
+
+**Пример использования**
+```javascript
+containsSubstring('Hello, World!', 'World'); // true
+containsSubstring('JavaScript', 'CSS'); // false
+containsSubstring('Programming is fun', 'gram'); // true
+containsSubstring('OpenAI', 'AI'); // true
+```
+
+### Задача 4
+Даны строки S, S1 и S2. Напиши функцию `replaceSubstring()`, которая заменяет в строке S первое вхождение строки S1 на строку S2.
+
+**Параметры:**
+
+- S: основная строка.
+- S1: подстрока, которую нужно заменить.
+- S2: строка, которой нужно заменить первое вхождение S1.
+
+**Пример использования**
+```javascript
+replaceSubstring('Hello, World!', 'World', 'Universe'); // 'Hello, Universe!'
+replaceSubstring('JavaScript is amazing', 'is', 'will be'); // 'JavaScript will be amazing'
+replaceSubstring('Programming is fun', 'Java', 'Python'); // 'Programming is fun'
+replaceSubstring('OpenAI', 'AI', 'Artificial Intelligence'); // 'OpenArtificial Intelligence'
+```
+
+### Задача 5
+Дана строка, состоящая из английских слов, разделенных пробелами. Напиши функцию `countWordsWithSameLetters()`, которая находит количество слов, начинающихся и заканчивающихся одной и той же буквой.
+
+**Параметры:**
+
+- sentence: строка с английскими словами, разделенными пробелами.
+
+**Пример использования**
+```javascript
+countWordsWithSameLetters('Moon Mellow Muffin'); // 0
+countWordsWithSameLetters('Racecar radar level Civic'); // 4
+countWordsWithSameLetters('Language Model'); // 0
+countWordsWithSameLetters('WOW'); // 1
+```
+
+### Задача 6
+Дана строка, состоящая из слов. Напиши функцию `countWordsWithA()`, которая находит количество слов, содержащих хотя бы одну букву «A».
+
+**Параметры:**
+
+- sentence: строка, состоящая из слов.
+
+**Пример использования**
+```javascript
+countWordsWithA('Apple Banana Cherry'); // 2
+countWordsWithA('Hello World'); // 0
+countWordsWithA('Aardvark Zebra Elephant'); // 3
+countWordsWithA('This is a sample sentence.'); // 2
+```
+
+### Задача 7
+Дана строка-предложение с избыточными пробелами между словами. Напиши функцию `normalizeSpaces()`, которая преобразует строку так, чтобы между словами был ровно один пробел.
+
+**Параметры:**
+
+- sentence: строка-предложение с избыточными пробелами.
+
+**Пример использования**
+```javascript
+normalizeSpaces('  Hello   world! '); // 'Hello world!'
+normalizeSpaces('  This  is   a   sample    sentence. '); // 'This is a sample sentence.'
+normalizeSpaces('  Multiple    spaces  between    some words. '); // 'Multiple spaces between some words.'
+```
+
+### Задача 8
+Дана строка, содержащая полное имя файла, то есть имя диска, список каталогов (путь), собственно имя и расширение. Напиши функцию `extractFileName()`, которая выделяет из этой строки имя файла (без расширения).
+
+**Параметры:**
+
+- fullFileName: полное имя файла.
+
+**Пример использования**
+```javascript
+extractFileName('C:/Users/username/Documents/example.txt'); // 'example'
+extractFileName('../index.html'); // 'index'
+extractFileName('/home/user/images/photo.jpg'); // 'photo'
+```
+
+### Задача 9
+Дана строка-предложение. Напиши функцию `encryptSentence()`, которая зашифровывает ее, помещая в начало все символы, расположенные на четных позициях строки, а затем, в обратном порядке, все символы, расположенные на нечетных позициях.
+
+**Параметры:**
+
+- sentence: исходная строка-предложение.
+
+**Пример использования**
+```javascript
+encryptSentence('JavaScript'); // 'aacitprSvJ'
+encryptSentence('Hello, World!'); // 'el,Wrd!lo olH'
+encryptSentence('Hexlet'); // 'eltexH'
+```
+
+### Задача 10
+Дана строка, содержащая латинские буквы и круглые скобки. Напиши функцию `checkBrackets()`, которая проверяет правильность расстановки скобок в строке.
+
+**Возвращаемое значение:**
+
+Если скобки расставлены правильно, вернуть число 0.
+В противном случае вернуть:
+- Номер позиции первой ошибочной закрывающей скобки, если есть лишняя закрывающая скобка.
+- -1, если закрывающих скобок не хватает.
+
+**Параметры:**
+
+- expression: строка с латинскими буквами и круглыми скобками.
+
+**Пример использования**
+```javascript
+checkBrackets('((a + b) * (c - d))'); // 0
+checkBrackets(')a + b) * (c - d)('); // 1
+checkBrackets('(a + b) * (c - d))'); // 18
+checkBrackets('((a + b) * (c - d)'); // -1
+```
+
+## Группа Логический тип данных
+
+Решения должны быть размещены в файле boolean.js
+
+Для запуска теста используйте команду ___
+
+**При решении задач этого типа запрещено использование условий (if,  case)**
+
+### Задача 1
+Дано целое число A. Напиши функцию `isPositive()`, которая проверяет истинность высказывания: «Число A является положительным».
+
+**Параметры:**
+
+- A: целое число.
+
+**Пример использования**
+```javascript
+isPositive(5); // true
+isPositive(-3); // false
+isPositive(0); // false
+```
+
+### Задача 2
+Дано целое число A. Напиши функцию `isOdd()`, которая проверяет истинность высказывания: «Число A является нечетным».
+
+**Параметры:**
+
+- A: целое число.
+
+**Пример использования**
+```javascript
+isOdd(5); // true
+isOdd(8); // false
+isOdd(-3); // true
+```
+
+### Задача 3
+Даны два целых числа: A и B. Напиши функцию `checkInequality()`, которая проверяет истинность высказывания: «Справедливы неравенства A > 2 и B ≤ 3».
+
+**Параметры:**
+
+- A: целое число.
+- B: целое число.
+
+**Пример использования**
+```javascript
+checkInequality(4, 3); // true
+checkInequality(1, 2); // false
+checkInequality(5, 1); // true
+```
+
+### Задача 4
+Даны два целых числа: A и B. Напиши функцию `checkInequality2()`, которая проверяет истинность высказывания: «Справедливы неравенства A ≥ 0 или B < –2».
+
+**Параметры:**
+
+- A: целое число.
+- B: целое число.
+
+**Пример использования**
+```javascript
+checkInequality2(4, -3); // true
+checkInequality2(-1, -2); // false
+checkInequality2(0, 1); // true
+```
+
+### Задача 5
+Даны три целых числа: A, B, C. Напиши функцию `checkBetweenNumbers()`, которая проверяет истинность высказывания: «Значение числа B находится между числами A и C».
+
+**Параметры:**
+
+- A: целое число.
+- B: целое число.
+- C: целое число.
+
+**Пример использования**
+```javascript
+checkBetweenNumbers(1, 2, 3); // true
+checkBetweenNumbers(5, 5, 8); // false
+checkBetweenNumbers(10, 7, 5); // true
+```
+
+### Задача 6
+Дано целое число. Напиши функцию `checkOddThreeDigitNumber()`, которая проверяет истинность высказывания: «Данное число является нечетным трехзначным».
+
+**Параметры:**
+
+- number: целое число.
+
+**Пример использования**
+```javascript
+checkOddThreeDigitNumber(135); // true
+checkOddThreeDigitNumber(246); // false
+checkOddThreeDigitNumber(-789); // true
+checkOddThreeDigitNumber(2458); // false
+checkOddThreeDigitNumber(031); // false
+```
+
+### Задача 7
+Дано трехзначное число. Напиши функцию `checkUniqueDigits()`, которая проверяет истинность высказывания: «Все цифры данного числа различны».
+
+**Параметры:**
+
+- number: целое число.
+
+**Пример использования**
+```javascript
+checkUniqueDigits(123); // true
+checkUniqueDigits(122); // false
+checkUniqueDigits(-987); // true
+checkUniqueDigits(1234); // false
+checkUniqueDigits(-77); // false
+```
+
+### Задача 8
+Даны числа x и y. Напиши функцию `isSecondQuadrant()`, которая проверяет истинность высказывания: «Точка с координатами (x, y) лежит во второй координатной четверти».
+![Координатные четверти](https://acmp.ru/asp/article/image.asp?id=535)
+
+
+**Параметры:**
+
+- x: координата точки по оси X.
+- y: координата точки по оси Y.
+
+**Пример использования**
+```javascript
+isSecondQuadrant(-2, 3); // true
+isSecondQuadrant(5, -1); // false
+isSecondQuadrant(-1, -2); // false
+```
+
+### Задача 9
+Даны целые числа a, b, c, являющиеся сторонами некоторого треугольника. Напиши функцию `isIsoscelesTriangle()`, которая проверяет истинность высказывания: «Треугольник со сторонами a, b, c является равнобедренным».
+![Типы треугольников](https://schoolfiles.ru/wp-content/uploads/2021/11/tablitsa-vidy-treugolnikov-768x543.jpg)
+
+
+**Параметры:**
+
+- a: длина первой стороны треугольника.
+- b: длина второй стороны треугольника.
+- c: длина третьей стороны треугольника.
+
+**Пример использования**
+```javascript
+isIsoscelesTriangle(3, 4, 3); // true
+isIsoscelesTriangle(5, 7, 8); // false
+isIsoscelesTriangle(5, 5, 6); // true
+```
+
+### Задача 10
+Даны координаты двух различных полей шахматной доски x1, y1, x2, y2 (целые числа, лежащие в диапазоне 1–8,нумерация начинается с левого верхнего угла доски). Напиши функцию `areSameColorFields()`, которая проверяет истинность высказывания: «Данные поля имеют одинаковый цвет».
+
+**Параметры:**
+
+- x1: горизонтальная координата первого поля.
+- y1: вертикальная координата первого поля.
+- x2: горизонтальная координата второго поля.
+- y2: вертикальная координата второго поля.
+
+**Пример использования**
+```javascript
+areSameColorFields(1, 1, 2, 2); // true
+areSameColorFields(3, 4, 5, 6); // true
+areSameColorFields(7, 8, 1, 3); // false
 ```
