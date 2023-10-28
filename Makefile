@@ -1,5 +1,5 @@
-init:
-	npm init
+install:
+	npm ci
 
 lint:
 	eslint .
