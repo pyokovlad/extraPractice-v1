@@ -21,6 +21,3 @@ test-branching:
 
 test-strings:
 	npx jest __tests__/strings.test.js
-
-push: lint
-	git push
