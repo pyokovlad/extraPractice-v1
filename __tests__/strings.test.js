@@ -67,7 +67,7 @@ describe('Group: strings', () => {
 
     expect(countWordsWithSameLetters('a b c d e')).toBe(5);
 
-    expect(countWordsWithSameLetters('Hello world Willow')).toBe(1);
+    expect(countWordsWithSameLetters('Hello world Willow')).toBe(0);
   });
 
   test('task6', () => {
