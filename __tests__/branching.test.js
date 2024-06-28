@@ -4,6 +4,7 @@ import {
   findMiddleNumber,
   findUniqueNumber,
   calculateF,
+  getDayName,
   describeNumber,
   convertToMeters,
   describeAge,
